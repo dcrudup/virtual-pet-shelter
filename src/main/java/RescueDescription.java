@@ -14,13 +14,5 @@ public class RescueDescription {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

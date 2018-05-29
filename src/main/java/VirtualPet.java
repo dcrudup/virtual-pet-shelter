@@ -28,24 +28,6 @@ public class VirtualPet {
 	}
 
 	
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }
