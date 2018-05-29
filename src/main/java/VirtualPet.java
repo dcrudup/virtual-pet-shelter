@@ -1,33 +1,30 @@
 
 public class VirtualPet {
 
-	private String homelessPet;
+	private String rescueName;
 
-	public VirtualPet(String homelessPet, String string2) {
-		this.homelessPet = homelessPet;
+	public VirtualPet(String rescueName, int hunger, int thirst, int boredom, String string2) {
+		this.rescueName = rescueName;
 		
 	}
 
-	public VirtualPet(int i, int j, int k) {
+	public String getRescueName() {
 		
-	}
-
-	public String getVirtualPet() {
-		
-		return homelessPet;
+		return rescueName;
 	}
 
 	public int getHungerLevel() {
 		
-		return 20;
+		return 25;
 	}
-
+	
 	public int getThirstLevel() {
 		
 		return 25;
 	}
 
-	
-	
-	
+	public int getBoredomLevel() {
+		
+		return 25;
+	}
 }

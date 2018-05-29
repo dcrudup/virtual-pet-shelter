@@ -1,0 +1,127 @@
+@Test
+	public void shouldBeAbleToIntakeHomelessPets() {
+		underTest.add(homelessPet1);
+		VirtualPet retrievedRescue = underTest.findRescue("1");
+		assertThat(retrievedRescue, is(homelessPet1));
+		
+	}
+
+
+@Test
+	public void shouldBeAbleToIntakeTwoHomelessPets() {
+		underTest.add(homelessPet1);
+		underTest.add(homelessPet2);
+		Collection<VirtualPet> allHomelessPets = underTest.getallHomelessPets();
+		assertThat(allHomelessPets, containsInAnyOrder(homelessPet1, homelessPet2));
+		assertEquals(2, allHomelessPets.size());
+	}
+
+
+	import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+
+import java.util.Collection;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class ShelterTest {
+	
+	VirtualPetShelter underTest;
+	VirtualPet rescue1;
+	
+	
+	@Before
+	public void setUp() {
+		underTest = new VirtualPetShelter();
+		rescue1 = new VirtualPet("Bella", 0, 0, 0);
+		//you can remove the number and use the pet name as 
+		//the primary key...then create fields for hunger,thirst
+		//and boredom 
+		
+		
+	}
+	
+	@Test
+	public void shouldBeAbleToIntakeRescuedPets() {
+		underTest.add(rescue1);
+		String retrievedRescue = underTest.findRescue("Bella");
+		assertThat(retrievedRescue, is(rescue1));
+
+	}
+	
+	@Test
+	public void rescuePetsShouldHaveADefaultHungerLevelOf25() {
+
+		VirtualPet underTest = new VirtualPet("", 0, 0, 0);
+		int check = underTest.getHungerLevel();
+		assertEquals(25, check);
+
+	}
+	
+	@Test
+	public void rescuePetsShouldHaveADefaultThirstLevelOf25() {
+
+		VirtualPet underTest = new VirtualPet("", 0, 0, 0);
+		int check = underTest.getThirstLevel();
+		assertEquals(25, check);
+
+	}
+	@Test
+	public void rescuePetsShouldHaveADefaultBoredomLevelOf25() {
+		VirtualPet underTest = new VirtualPet("", 0, 0, 0);
+		int check = underTest.getBoredomLevel();
+		assertEquals(25, check);
+	}
+	
+	
+	import java.util.Collection;
+
+public class VirtualPetShelter {
+
+	public void add() {
+		
+		
+	}
+
+	public VirtualPet findRescue(String name, int hunger, int thirst, int boredom) {
+		
+		return null;
+	}
+
+	public void add(VirtualPet rescue1) {
+		
+		
+	}
+
+	public Collection<VirtualPet> getallRescuedPets() {
+		
+		return null;
+	}
+
+	public void adopt(VirtualPet rescue1) {
+		
+		
+	}
+
+	public VirtualPet findRescue(String virtualPet) {
+		
+		return null;
+	}
+
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -3,28 +3,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class VirtualPetShelter {
-	
-	Map<String, VirtualPet> homelessPets = new HashMap<>();
 
-	public void add(VirtualPet homelessPet) {
-		homelessPets.put(homelessPet.getVirtualPet(), homelessPet);
-		
-		
+	Map<String, VirtualPet> rescuedPets = new HashMap<>();
+
+	public void add(VirtualPet rescue) {
+		rescuedPets.put(rescue.getRescueName(), rescue);
 	}
 
-	public VirtualPet findRescue(String VirtualPet) {
-		
-		return homelessPets.get(VirtualPet);
+	public VirtualPet findRescue(String rescueName) {
+		return rescuedPets.get(rescueName);
 	}
 
-	public Collection<VirtualPet> getallHomelessPets() {
-		
-		return homelessPets.values();
+	public Collection<VirtualPet> getAllRescuedPets() {
+		return rescuedPets.values();
 	}
 
-	public void adopt(VirtualPet homelessPet) {
-		homelessPets.remove(homelessPet.getVirtualPet(), homelessPet);
-		
+	public void adopt(VirtualPet rescue) {
+		rescuedPets.remove(rescue.getRescueName(), rescue);
 	}
-	
+
 }
