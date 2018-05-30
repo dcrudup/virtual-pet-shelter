@@ -22,4 +22,26 @@ public class VirtualPetShelter {
 		rescuedPets.remove(rescue.getRescueName(), rescue);
 	}
 
+	public void feedAllOfThePets() {
+		for (VirtualPet rescue : rescuedPets.values()) {
+			rescue.feedRescues();
+		}
+	}
+
+	public void shouldWaterAllOfThePets() {
+		for (VirtualPet rescue : rescuedPets.values()) {
+			rescue.waterRescues();
+		}
+
+	}
+
+	public VirtualPet playWithPet(String response) {
+		return rescuedPets.get(response).playWithRescues();
+
+	}
+
+	public void tick() {
+
+	}
+
 }
